@@ -4,7 +4,7 @@
 -- -----------------------------------------------------
 -- Table 'tblRole'
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS 'tblRole' (
+CREATE TABLE IF NOT EXISTS 'event'.'tblRole' (
   'id' INT NOT NULL AUTO_INCREMENT,
   'name' VARCHAR(100) NOT NULL,
   'active' TINYINT(1) NOT NULL,
@@ -16,7 +16,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table 'tblUser'
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS 'tblUser' (
+CREATE TABLE IF NOT EXISTS 'event'.'tblUser' (
   'id' INT NOT NULL AUTO_INCREMENT,
   'firstName' VARCHAR(100) NULL,
   'lastName' VARCHAR(100) NULL,
@@ -41,7 +41,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table 'tblEventType'
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS 'tblEventType' (
+CREATE TABLE IF NOT EXISTS 'event'.'tblEventType' (
   'id' INT NOT NULL AUTO_INCREMENT,
   'name' VARCHAR(45) NOT NULL,
   'active' TINYINT(1) NOT NULL,
@@ -53,7 +53,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table 'tblEvent'
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS 'tblEvent' (
+CREATE TABLE IF NOT EXISTS 'event'.'tblEvent' (
   'id' INT NOT NULL AUTO_INCREMENT,
   'title' VARCHAR(45) NULL,
   'description' VARCHAR(45) NULL,
@@ -88,7 +88,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table 'tblFile'
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS 'tblFile' (
+CREATE TABLE IF NOT EXISTS 'event'.'tblFile' (
   'id' INT NOT NULL AUTO_INCREMENT,
   'content' LONGBLOB NULL,
   'url' VARCHAR(200) NULL,
@@ -108,7 +108,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table 'tblAttendance'
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS 'tblAttendance' (
+CREATE TABLE IF NOT EXISTS 'event'.'tblAttendance' (
   'id' INT NOT NULL AUTO_INCREMENT,
   'attendance' TINYINT(1) NULL,
   'rate' INT NULL,
@@ -133,7 +133,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table 'tblComment'
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS 'tblComment' (
+CREATE TABLE IF NOT EXISTS 'event'.'tblComment' (
   'id' INT NOT NULL AUTO_INCREMENT,
   'comment' TEXT NULL,
   'creationDate' TIMESTAMP NULL,
@@ -159,7 +159,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table 'tblTag'
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS 'tblTag' (
+CREATE TABLE IF NOT EXISTS 'event'.'tblTag' (
   'id' INT NOT NULL AUTO_INCREMENT,
   'name' VARCHAR(45) NULL,
   PRIMARY KEY ('id'))
@@ -169,7 +169,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table 'tblTagEvent'
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS 'tblTagEvent' (
+CREATE TABLE IF NOT EXISTS 'event'.'tblTagEvent' (
   'id' INT NOT NULL AUTO_INCREMENT,
   'idEvent' INT NULL,
   'idTag' INT NULL,
